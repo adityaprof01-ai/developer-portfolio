@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya Raj Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">AR</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+
+        <h1>
+            Building Modern
+            Web Experiences.
+        </h1>
+        <br><BR>
+        <p>
+            Frontend Developer, Blockchain Enthusiast, and Information Science Student focused on creating clean and
+            responsive digital experiences.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn primary">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact Me
+            </a>
+        </div>
+
+    </section>
+    <section id="about" class="about hidden">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-content">
+            I'm Aditya Raj, an Information Science student passionate about web development, blockchain technology, and
+            problem solving.
+            <br> <br>
+
+            I enjoy building modern user interfaces with React and continuously improving my skills through projects and
+            hands-on learning.
+            <br><br>
+            Currently, I'm focused on frontend development, Data Structures & Algorithms, Git/GitHub, and Web3
+            technologies as I work toward becoming a full-stack developer.
+
+        </div>
+    </section>
+
+    <section id="skills" class="skills hidden">
+        <div class="section-title">
+            <h2>Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">Python</div>
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">React</div>
+            <div class="skill-card">DSA</div>
+            <div class="skill-card">Git</div>
+            <div class="skill-card">GitHub</div>
+        </div>
+    </section>
+    <section id="projects" class="projects hidden">
+        <div class="section-title">
+            <h2>Projects</h2>
+        </div>
+
+
+
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Developer Portfolio</h3>
+                <p>
+                    Personal portfolio website built using HTML, CSS, JavaScript and React.
+                </p>
+                <button>View Project</button>
+            </div>
+
+
+
+            <div class="project-card">
+                <h3>DSA Repository</h3>
+                <p>
+                    Collection of Data Structures and Algorithms solutions in Python.
+                </p>
+                <button>View Project</button>
+            </div>
+
+
+
+            <div class="project-card">
+                <h3>Blockchain Learning</h3>
+                <p>
+                    Smart contracts, Web3 experiments and blockchain notes.
+                </p>
+                <a href="https://github.com/adityaprof01-ai" target="_blank" class="btn primary">
+                    View Project
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact hidden">
+
+        <div class="contact-grid">
+
+            <div class="contact-left">
+
+                <span class="small-label">CONTACT</span>
+
+                <h2 class="contact-title">
+                    Let's Work Together
+                </h2>
+
+                <p class="contact-text">
+                    I'm passionate about building modern web experiences,
+                    learning blockchain technology, and solving real-world
+                    problems through software.
+                </p>
+
+                <p class="contact-text">
+                    Whether you want to collaborate, discuss opportunities,
+                    or simply connect, I'd love to hear from you.
+                </p>
+
+            </div>
+
+            <div class="contact-right">
+
+                <a href="https://github.com/adityaprof01-ai" class="contact-link">
+                    <span>GitHub</span>
+                    <span>→</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/aditya-raj-3992b3322" class="contact-link">
+                    <span>LinkedIn</span>
+                    <span>→</span>
+                </a>
+
+                <a href="mailto:adityaprof01@gmail.com" class="contact-link">
+                    <span>Email</span>
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer>
+        <p>© 2026 Aditya Raj. All Rights Reserved.</p>
+    </footer>
+    <script>
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.1
+            }
+        );
+        document.querySelectorAll(".hidden").forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
